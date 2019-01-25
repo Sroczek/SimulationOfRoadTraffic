@@ -262,7 +262,7 @@ public class MapBuilder implements Cloneable{
 
         ArrayList<DestinationPoint> destinasionsPoints = this.getDestinasionsPoints(this.freePoints,this.defaultOutFlow);
 
-        Car wzorzec = new Car(10,0.1,-0.01,"file:C:\\Users\\Jakub Sroka\\Obiektowe\\Symulacja v4\\src\\autko.png");
+        Car wzorzec = new Car(10,0.1,-0.01,"car.png");
         ArrayList<SpawnPoint> spawnPoints = this.getSpawnPoints(wzorzec, this.defaultMaxTicsPerCar ,this.freePoints, destinasionsPoints);
 
         Map map = new Map(roadsAndIntesections.getLeft(),roadsAndIntesections.getRight(),spawnPoints,destinasionsPoints);

@@ -228,7 +228,7 @@ public abstract class Road implements Observable, Attachable, Connectable {
 //    public String toString() {
 //        StringBuilder stringBuilder = new StringBuilder();
 //        for(int i = 0; i<listOfCars.size();i++){
-//            stringBuilder.append("Autko: " + i + "\n" + listOfCars.get(i).toString());
+//            stringBuilder.append("Car: " + i + "\n" + listOfCars.get(i).toString());
 //        }
 //        return stringBuilder.toString();
 //    }
