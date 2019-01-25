@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="748.0" prefWidth="1255.0" scaleShape="false" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <SplitPane dividerPositions="0.149036376717037" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="717.0" prefWidth="1256.0" scaleShape="false">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="685.0" prefWidth="196.0">
+               <children>
+                  <GridPane layoutX="62.0" layoutY="42.0" prefHeight="627.0" prefWidth="212.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="42.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="118.87272399397926" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="71.47273009749489" minHeight="5.236363374063899" prefHeight="5.236363374063899" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="45.181806025229264" minHeight="0.0" prefHeight="8.636366975642431" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="94.05454772444801" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="94.05454772444801" minHeight="0.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="129.709088740073" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="129.709088740073" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="179.3090964072993" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="addOneWayRoadButton" mnemonicParsing="false" onMouseClicked="#addStraightRoad" prefHeight="30.0" prefWidth="200.0" text="Add one way road" GridPane.halignment="CENTER" />
+                        <Button fx:id="addTwoWayRoadButton" mnemonicParsing="false" onMouseClicked="#addBidirectionalRoad" prefHeight="30.0" prefWidth="200.0" text="Add two-way road" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Button fx:id="clearButton" mnemonicParsing="false" onMouseClicked="#clear" prefHeight="30.0" prefWidth="200.0" text="Clear" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                        <Button fx:id="startButton" mnemonicParsing="false" onMouseClicked="#startSimulation" prefHeight="30.0" prefWidth="200.0" text="Start" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <Slider fx:id="scaleSlider" blockIncrement="0.01" max="0.5" onMouseDragged="#setScale" value="0.25" GridPane.rowIndex="10" GridPane.valignment="TOP" />
+                        <Button fx:id="stopButton" mnemonicParsing="false" onMouseClicked="#stopSimulation" prefHeight="30.0" prefWidth="200.0" text="Stop" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <Slider fx:id="maxInflowSlider" blockIncrement="0.1" max="10.5" min="0.5" onMouseDragged="#setDefaultMaxInflow" value="5.5" GridPane.rowIndex="14" GridPane.valignment="TOP" />
+                        <Slider fx:id="maxVelocitySlider" blockIncrement="0.5" max="26.0" onMouseDragged="#setMaxVelocity" value="13.0" GridPane.rowIndex="12" GridPane.valignment="TOP" />
+                        <Label text="Scale" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="BOTTOM" />
+                        <Label text="Maximum Velocity" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="BOTTOM" />
+                        <Label text="Inflow (in Seconds per Car)" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="BOTTOM" />
+                        <Button fx:id="buildButton" mnemonicParsing="false" onMouseClicked="#buildSimulation" prefHeight="30.0" prefWidth="200.0" text="Build" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="pane" minHeight="0.0" minWidth="0.0" prefHeight="716.0" prefWidth="1037.0" />
+        </items>
+      </SplitPane>
+      <Label fx:id="errorTextField" prefHeight="31.0" prefWidth="962.0" scaleShape="false" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+   </children>
+</GridPane>
